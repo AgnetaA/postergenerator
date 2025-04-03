@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className={styles.main} id="main">
-      <article className={styles.homePageQuote}>
+      <article className={styles.homePageQuoteBox}>
         <q className={`${styles.quote} ${styles.homePageQuote}`}>When a thing has been said, and said well, have no scruple. Take it and copy it.</q>
         <p className={`${styles.author} ${styles.homePageAuthor}`}>~Anatole France</p>
       </article>

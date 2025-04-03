@@ -17,8 +17,7 @@
 body {
   min-height: 100vh;
   background: var(--pastelGradient); 
-  /* background-image: url("../public/tulips.jpg");
-  background-size: contain; */
+  
 }
 
 main {
@@ -28,4 +27,10 @@ main {
   padding: 2rem;
   background-color: var(--background);
   font-family: roboto, sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  main{
+     width: 100vw;
+  }
 }
