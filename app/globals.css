@@ -4,3 +4,33 @@
   margin: 0;
 }
 
+:root {
+  --background: #ffffff;
+  --foreground: #272727;
+  --greyText: #494949;
+  --midGrey: #797979;
+  --bodyBackgroundColor: #e9ade9; 
+  --pastelGradient: linear-gradient(0deg, rgba(164,229,175,1) 0%, rgba(229,238,128,1) 30%, rgba(226,157,199,1) 65%, rgba(132,202,216,1) 100%);
+
+}
+
+body {
+  min-height: 100vh;
+  background: var(--pastelGradient); 
+  
+}
+
+main {
+  width:1200px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--background);
+  font-family: roboto, sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  main{
+     width: 100vw;
+  }
+}
