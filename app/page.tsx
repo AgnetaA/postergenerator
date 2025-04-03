@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import SearchFunction from "@/components/search-function";
 
 export default function Home() {
   return (
@@ -13,10 +14,7 @@ export default function Home() {
       <article className={styles.quoteSearch}>
         <h2 >Make a thoughtworthy poster with a quote!</h2>
 
-        <form className={styles.quoteSearchForm}>
-          <label>Search quotes: </label>
-          <input type="text" id="search" name="search" />
-        </form>
+        <SearchFunction />
         
         <Link className={styles.mainPageLink} href="#">Just take me to all the quotes!</Link>
       </article>
