@@ -14,6 +14,12 @@
 
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #272727;
+  }
+}
+
 body {
   min-height: 100vh;
   background: var(--pastelGradient); 
@@ -29,8 +35,8 @@ main {
   font-family: roboto, sans-serif;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1220px) {
   main{
-     width: 100vw;
+     width: 98vw;
   }
 }
