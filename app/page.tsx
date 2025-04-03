@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import styles from "./page.module.css";
 import Link from "next/link";
 import SearchFunction from "@/components/search-function";
@@ -16,7 +16,7 @@ export default function Home() {
 
         <SearchFunction />
         
-        <Link className={styles.mainPageLink} href="#">Just take me to all the quotes!</Link>
+        <Link className={styles.mainPageLink} href="#">I just want to read the quotes!</Link>
       </article>
 
       
