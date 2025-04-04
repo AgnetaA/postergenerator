@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Quotes } from "@/interfaces";
 // import Link from "next/link";
+import styles from "../app/search/page.module.css";
 
 
 interface searchResultsProps {
@@ -25,7 +26,7 @@ export default function SearchResults({ query }: searchResultsProps) {
 
                 //filters out quotes with search query
                 const quotes: Quotes[] = allQuotes.filter((allquotes) => {
-                    return allquotes.quote.toLowerCase().includes(query.toLowerCase());
+                    return allquotes.quote.toLowerCase().includes(query.toLowerCase()) || allquotes.author.toLowerCase().includes(query.toLowerCase());
                 });
 
                 setQuotes(quotes || []);
@@ -40,14 +41,16 @@ export default function SearchResults({ query }: searchResultsProps) {
         fetchQuotes();
     }, [query]);
 
+
+
     return (
-        <section>
+        <section className={styles.section}>
 
             {quotes.length > 0 ? quotes.map((quotes, i) => (
 
-                <article key={i}>
-
-                    <p><span>{quotes.id}: </span>{quotes.quote}</p>
+                <article className={styles.quoteCard} key={i}>
+                    <q className={styles.quote}>{quotes.quote}</q>
+                    <p className={styles.author}>~{quotes.author}</p>
                 </article>
 
 

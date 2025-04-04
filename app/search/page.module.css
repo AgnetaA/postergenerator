@@ -1,3 +1,31 @@
 .main span {
     font-weight: 600;
 }
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+.quoteCard {
+    border: 2px solid purple;
+    width: 25vw;
+    padding: 2rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+    border-radius: 30px;
+}
+
+
+
+.quote {
+    font-style: italic;
+    display: block;
+}
+
+.author {
+    font-family: var(--font-dancing-script);
+    display: block;
+    padding: 1rem;
+}
