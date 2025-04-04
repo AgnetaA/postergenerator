@@ -21,22 +21,16 @@ export default function SearchResults({ query }: searchResultsProps) {
                 const data = await response.json();
 
 
+                const allQuotes: Quotes[] = data.quotes;
 
-
-                const quotes: Quotes[] = data.quotes;
-
-
-
-
-                //FUNKTION för att gallra ut resultat
-               
-
+                //filters out quotes with search query
+                const quotes: Quotes[] = allQuotes.filter((allquotes) => {
+                    return allquotes.quote.toLowerCase().includes(query.toLowerCase());
+                });
 
                 setQuotes(quotes || []);
 
-
                 console.log(quotes);
-
 
             }
             catch (error) {
@@ -46,17 +40,13 @@ export default function SearchResults({ query }: searchResultsProps) {
         fetchQuotes();
     }, [query]);
 
-
-
-
     return (
         <section>
-            {query}
 
             {quotes.length > 0 ? quotes.map((quotes, i) => (
 
                 <article key={i}>
-                    
+
                     <p><span>{quotes.id}: </span>{quotes.quote}</p>
                 </article>
 
