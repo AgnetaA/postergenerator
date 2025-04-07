@@ -1,5 +1,8 @@
 .main span {
     font-weight: 600;
+}
+
+.main {
     color: var(--foreground);
 }
 
@@ -18,11 +21,14 @@
 
 .quoteCard {
     background-color: var(--background-purple);
+    
     width: 30%;
     padding: 2rem;
     font-size: 1.2rem;
     margin: 1rem;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -40,16 +46,16 @@
 
 
 
-
-
 .quote {
     font-style: italic;
-    display: block;
 }
 
 .author {
     font-family: var(--font-dancing-script);
-    display: block;
     padding: 1rem;
-    float: right;
+    margin-left: auto;
+}
+
+.idLink {
+    margin-top: auto;
 }
