@@ -1,3 +1,55 @@
 .main span {
     font-weight: 600;
+    color: var(--foreground);
+}
+
+.searchTerm {
+    padding-bottom: 5px;
+}
+.searchField {
+    padding-bottom: 2rem;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.quoteCard {
+    background-color: var(--background-purple);
+    width: 30%;
+    padding: 2rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+    border-radius: 30px;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .quoteCard {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 720px) {
+    .quoteCard {
+        width: 100%;
+        margin: .5rem;
+    }
+}
+
+
+
+
+
+.quote {
+    font-style: italic;
+    display: block;
+}
+
+.author {
+    font-family: var(--font-dancing-script);
+    display: block;
+    padding: 1rem;
+    float: right;
 }

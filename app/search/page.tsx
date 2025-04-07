@@ -11,8 +11,10 @@ export default function QuoteResults() {
     return (
         <main className={styles.main} id="main">
 
-            <p><span>Your Search: </span>{query}</p>
-            <SearchFunction />
+            <p className={styles.searchTerm}><span>Your Search: </span>{query}</p>
+            <div className={styles.searchField}>
+                <SearchFunction />
+            </div>
             <SearchResults query={query}/>
 
         </main>
