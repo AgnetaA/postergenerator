@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Quotes } from "@/interfaces";
-// import Link from "next/link";
+import Link from "next/link";
 import styles from "../app/search/page.module.css";
+
 
 
 interface searchResultsProps {
@@ -40,7 +41,10 @@ export default function SearchResults({ query }: searchResultsProps) {
         };
         fetchQuotes();
     }, [query]);
+    
 
+
+ 
 
 
     return (
@@ -51,6 +55,8 @@ export default function SearchResults({ query }: searchResultsProps) {
                 <article className={styles.quoteCard} key={i}>
                     <q className={styles.quote}>{quotes.quote}</q>
                     <p className={styles.author}>~{quotes.author}</p>
+                    <Link className={styles.idLink} href={`/${quotes.id}?query=${query}`}>Posterize this ➜</Link>
+                    
                 </article>
 
 
