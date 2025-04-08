@@ -32,8 +32,6 @@ export default function SearchResults({ query }: searchResultsProps) {
 
                 setQuotes(quotes || []);
 
-                console.log(quotes);
-
             }
             catch (error) {
                 console.error("Error fetching quotes: ", error);
@@ -43,8 +41,6 @@ export default function SearchResults({ query }: searchResultsProps) {
     }, [query]);
     
 
-
- 
 
 
     return (
@@ -61,9 +57,6 @@ export default function SearchResults({ query }: searchResultsProps) {
 
 
             )) : <p>No results found, try another search</p>}
-
-
-
 
 
         </section>
