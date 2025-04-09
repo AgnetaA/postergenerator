@@ -1,0 +1,12 @@
+.header {
+    width: 1200px;
+    height: 150px;
+    margin: auto;
+    background-color: var(--background);
+}
+
+@media screen and (max-width: 1220px) {
+    .header {
+       width: 98vw;
+    }
+  }
