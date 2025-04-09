@@ -3,3 +3,8 @@ export interface Quotes {
     quote: string,
     author: string,  
 }
+
+export interface Photo {
+    id: number,
+    url: string,
+}
