@@ -12,7 +12,7 @@ export default function Home() {
       </article>
 
       <article className={styles.quoteSearch}>
-        <h2 >Make a thoughtworthy poster with a quote!</h2>
+        <h2>Make a thoughtworthy poster with a quote!</h2>
 
         <SearchFunction />
         

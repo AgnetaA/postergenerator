@@ -23,8 +23,6 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
 
     let images = imgdata.hits;
 
-    console.log(query, images);
-
     //get random image
 
     let num: number = 0;
@@ -33,25 +31,15 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
         const newimgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=landscape&image_type=photo&per_page=50`);
         const newimgdata = await newimgresp.json(); 
         images = newimgdata.hits;
-        console.log("Nya bilder:", images);
+
         num = images.length;
     }
     else {
         num = images.length;
     }
 
-
+    //random image from array with index
     const imgIndex: number = Math.floor(Math.random() * num);
-
-    console.log("array length:", num, "random number:", imgIndex);
-
-    //get info of array object with index of randomized number
-    const randomImage = images[imgIndex];
-    console.log("random photo", randomImage);
-
-
-
-
 
     return (
         <main id="main">

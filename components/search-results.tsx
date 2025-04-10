@@ -4,16 +4,13 @@ import Link from "next/link";
 import styles from "../app/search/page.module.css";
 
 
-
 interface searchResultsProps {
     query: string | null;
 }
 
 export default function SearchResults({ query }: searchResultsProps) {
 
-
     const [quotes, setQuotes] = useState<Quotes[]>([]);
-
 
     useEffect(() => {
         if (!query) return;
@@ -41,8 +38,6 @@ export default function SearchResults({ query }: searchResultsProps) {
     }, [query]);
     
 
-
-
     return (
         <section className={styles.section}>
 
@@ -55,9 +50,7 @@ export default function SearchResults({ query }: searchResultsProps) {
                     
                 </article>
 
-
             )) : <p>No results found, try another search</p>}
-
 
         </section>
     )
