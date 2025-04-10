@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--greyText);
+  color: var(--foreground);
   background-image: url("../public/flowers-red.png");
   background-position: bottom;
   background-size: contain;
@@ -42,7 +42,7 @@
 
 .mainPageLink {
   padding-top: 3rem;
-  color: var(--greyText);
+  color: var(--foreground);
 }
 
 
