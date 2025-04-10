@@ -12,14 +12,11 @@ export default function Home() {
       </article>
 
       <article className={styles.quoteSearch}>
-        <h2 >Make a thoughtworthy poster with a quote!</h2>
-
-        <SearchFunction />
-        
+        <h2>Make a thoughtworthy poster with a quote!</h2>
+        <SearchFunction />   
         <Link className={styles.mainPageLink} href="#">I just want to read the quotes!</Link>
       </article>
-
-      
+     
     </main>
   );
 }

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(213, 207, 243);
+    background-color: rgb(30, 119, 135);
 }
 
 @media screen and (max-width: 1220px) {
@@ -23,4 +23,5 @@
     font-family: merienda;
     font-size: 4rem;
     color: var(--foreground);
+    text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
   }
