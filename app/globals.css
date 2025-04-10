@@ -24,7 +24,7 @@
 body {
   min-height: 100vh;
   background: var(--background-blue); 
-  
+  background-image: url("../public/stars.jpg");
 }
 
 main {

@@ -1,0 +1,26 @@
+.header {
+    width: 1200px;
+    height: 150px;
+    margin: auto;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(213, 207, 243);
+}
+
+@media screen and (max-width: 1220px) {
+    .header {
+       width: 98vw;
+    }
+  }
+
+  .header a {
+    text-decoration: none;
+  }
+
+  .headerHeading {
+    font-family: merienda;
+    font-size: 4rem;
+    color: var(--foreground);
+  }

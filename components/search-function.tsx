@@ -12,7 +12,7 @@ export default function SearchFunction() {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const handleKeydown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-  
+    
     if (event.key === "Enter" && searchQuery.length > 0) {
       router.push(`/search?query=${searchQuery}`);
     }
@@ -23,10 +23,10 @@ export default function SearchFunction() {
 
   return (
 
-    <form className={styles.quoteSearchForm}>
+    <div className={styles.quoteSearchForm}>
       <label>Search quotes: </label>
       <input type="text" id="search" name="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleKeydown} />
+    </div>
 
-    </form>
   )
 }
