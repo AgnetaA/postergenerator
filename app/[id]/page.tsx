@@ -18,10 +18,10 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
 
 
     //get images
-    const imgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${query}&image_type=photo&per_page=25`);
+    const imgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${query}&image_type=photo&per_page=50`);
     const imgdata = await imgresp.json();
 
-    const images = imgdata.hits;
+    let images = imgdata.hits;
 
     console.log(query, images);
 
@@ -29,7 +29,12 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
 
     let num: number = 0;
     if (images.length < 1) {
-        alert("No images found");
+        //get photos from query "landscape" instead
+        const newimgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=landscape&image_type=photo&per_page=50`);
+        const newimgdata = await newimgresp.json(); 
+        images = newimgdata.hits;
+        console.log("Nya bilder:", images);
+        num = images.length;
     }
     else {
         num = images.length;
@@ -59,7 +64,7 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
                     height={300}
                 />
                 <article className={styles.quoteContainer}>
-                    <q className={styles.quote}>{quotedata.quote}</q>
+                    <p className={styles.quote}>{quotedata.quote}</p>
                     <p className={styles.author}>~{quotedata.author}</p>
                 </article>
             </section>
