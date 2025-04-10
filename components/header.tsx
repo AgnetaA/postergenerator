@@ -1,11 +1,12 @@
 import styles from "./header.module.css";
+import Link from "next/link";
 
 
 export default function Header() {
 
     return (
         <header className={styles.header}>
-            <h1 className={styles.headerHeading}>Posterizer</h1>
+            <Link href={`/`}><h1 className={styles.headerHeading}>Posterizer</h1></Link>
         </header>
 
 

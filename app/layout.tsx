@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Dancing_Script } from "next/font/google";
+import { Merienda } from "next/font/google"; 
 import "./globals.css";
 import Header from "@/components/header";
 
 const roboto = Roboto({
   variable: "--font-roboto",
+  subsets: ["latin"],
+});
+
+const merienda = Merienda({
+  variable: "--font-merienda",
   subsets: ["latin"],
 });
 
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${dancingScript.variable}`}>
+      <body className={`${roboto.variable} ${dancingScript.variable} ${merienda.variable}`}>
         <Header />
         {children}
       </body>

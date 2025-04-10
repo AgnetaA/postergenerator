@@ -12,7 +12,7 @@ export default function SearchFunction() {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const handleKeydown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    // event.preventDefault();
+    
     if (event.key === "Enter" && searchQuery.length > 0) {
       router.push(`/search?query=${searchQuery}`);
     }
