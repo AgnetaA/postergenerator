@@ -24,7 +24,7 @@ export default function SearchFunction() {
   return (
 
     <div className={styles.quoteSearchForm}>
-      <label>Search quotes: </label>
+      <label htmlFor="search">Search quotes: </label>
       <input type="text" id="search" name="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleKeydown} />
     </div>
 

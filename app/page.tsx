@@ -19,6 +19,8 @@ export default function Home() {
         <Link className={styles.mainPageLink} href="#">I just want to read the quotes!</Link>
       </article>
 
+      <div className={styles.decoration}></div>
+
       
     </main>
   );

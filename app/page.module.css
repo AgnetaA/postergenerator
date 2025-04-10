@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
   color: var(--greyText);
+  background-image: url("../public/flowers-red.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .homePageQuote {
@@ -12,9 +16,10 @@
 
 .homePageQuoteBox {
   font-size: 1.5rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
   display: block;
-  padding-bottom: 2rem;  
+  padding-bottom: 2rem; 
+
 }
 
 .author {
@@ -25,9 +30,14 @@
 }
 
 .quoteSearch {
-  padding-top: 3rem;
   display: flex;
   flex-direction: column;
+  background-color: var(--background);
+  padding: 4rem;
+
+  border: 5px solid #1970b3;
+  border-radius: 15px;
+
   h2 {
     padding-bottom: 2rem;
   }
@@ -37,6 +47,16 @@
   padding-top: 3rem;
   color: var(--greyText);
 }
+
+/* .decoration {
+  width: 90%;
+  height: 500px;
+  margin-bottom: 0;
+  margin-top: auto;
+  padding: 0;
+  background-image: url("../public/flowers.png");
+  background-size: cover;
+} */
 
 
 
