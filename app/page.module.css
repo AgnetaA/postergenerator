@@ -19,7 +19,6 @@
   padding-top: 2rem;
   display: block;
   padding-bottom: 2rem; 
-
 }
 
 .author {
@@ -34,10 +33,8 @@
   flex-direction: column;
   background-color: var(--background);
   padding: 4rem;
-
   border: 5px solid #1970b3;
   border-radius: 15px;
-
   h2 {
     padding-bottom: 2rem;
   }
@@ -48,15 +45,7 @@
   color: var(--greyText);
 }
 
-/* .decoration {
-  width: 90%;
-  height: 500px;
-  margin-bottom: 0;
-  margin-top: auto;
-  padding: 0;
-  background-image: url("../public/flowers.png");
-  background-size: cover;
-} */
+
 
 
 
