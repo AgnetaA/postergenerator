@@ -45,11 +45,6 @@
 }
 
 
-
-.quote {
-    font-style: italic;
-}
-
 .author {
     font-family: var(--font-dancing-script);
     padding: 1rem;
