@@ -14,7 +14,7 @@ export default async function AllQuotes() {
         <main id="main">
             <h2>All quotes</h2>
 
-            <GetAllQuotes />
+            <GetAllQuotes /> 
 
         </main>
     )
