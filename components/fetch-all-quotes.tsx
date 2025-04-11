@@ -4,14 +4,11 @@ import styles from "../app/allquotes/page.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
 
 
 export default function GetAllQuotes() {
     const searchParams = useSearchParams();
     let param = searchParams.get("skip");
-
-    const router = useRouter();
 
     let skip: number = 0;
     let next: number = 0;
@@ -21,12 +18,9 @@ export default function GetAllQuotes() {
     }
     else {
         skip = parseInt(param);
-
     }
 
     console.log("skip, next:", skip, next);
-
-
 
     const [allquotes, setQuotes] = useState<Quotes[]>([]);
 
@@ -42,7 +36,6 @@ export default function GetAllQuotes() {
 
                 setQuotes(allquotes || []);
 
-
             }
             catch (error) {
                 console.error("Error fetching quotes: ", error);
@@ -53,7 +46,7 @@ export default function GetAllQuotes() {
     }, [skip]);
 
 
-    if (skip <= 0) { 
+    if (skip <= 0) {
         return (
             <section className={styles.quotesContainer}>
                 {allquotes.length > 0 ? allquotes.map((quotes, i) => (
@@ -62,11 +55,13 @@ export default function GetAllQuotes() {
                         <p className={styles.author}>~{quotes.author}</p>
                     </article>
                 )) : <p>We have run out of quotes...</p>}
-                <Link className={styles.idLink} href={`/allquotes?skip=${skip + 10}`}>More Quotes 🡪</Link>
+                <div className={styles.linkContainer}>
+                    <Link className={styles.idLinkNext} href={`/allquotes?skip=${skip + 10}`}>More Quotes 🡪</Link>
+                </div>
             </section>
         );
     }
-    else if (skip >= 1450) { 
+    else if (skip >= 1450) {
         return (
             <section className={styles.quotesContainer}>
                 {allquotes.length > 0 ? allquotes.map((quotes, i) => (
@@ -75,7 +70,9 @@ export default function GetAllQuotes() {
                         <p className={styles.author}>~{quotes.author}</p>
                     </article>
                 )) : <p>We have run out of quotes...</p>}
-                <Link className={styles.idLink} href={`/allquotes?skip=${skip - 10}`}>🡨 Previous</Link>
+                <div className={styles.linkContainer}>
+                    <Link className={styles.idLinkPrev} href={`/allquotes?skip=${skip - 10}`}>🡨 Previous</Link>
+                </div>
             </section>
         )
     }
@@ -88,10 +85,12 @@ export default function GetAllQuotes() {
                         <p className={styles.author}>~{quotes.author}</p>
                     </article>
                 )) : <p>We have run out of quotes...</p>}
-                <Link className={styles.idLink} href={`/allquotes?skip=${skip - 10}`}>🡨 Previous</Link>
-                <Link className={styles.idLink} href={`/allquotes?skip=${skip + 10}`}>More Quotes 🡪</Link>
+                <div className={styles.linkContainer}>
+                    <Link className={styles.idLinkPrev} href={`/allquotes?skip=${skip - 10}`}>🡨 Previous</Link>
+                    <Link className={styles.idLinkNext} href={`/allquotes?skip=${skip + 10}`}>More Quotes 🡪</Link>
+                </div>
             </section>
         );
     }
 }
-     
+
