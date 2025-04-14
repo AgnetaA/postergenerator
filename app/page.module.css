@@ -33,7 +33,7 @@
   flex-direction: column;
   background-color: var(--background);
   padding: 4rem;
-  border: 5px solid #1970b3;
+  border: 5px solid var(--background-dark-blue);
   border-radius: 15px;
   h2 {
     padding-bottom: 2rem;
