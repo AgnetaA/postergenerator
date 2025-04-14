@@ -1,27 +1,147 @@
 .header {
-    width: 1200px;
-    height: 150px;
-    margin: auto;
-    background-color: var(--background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(30, 119, 135);
+  width: 1200px;
+  min-height: 160px;
+  margin: auto;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-background);
 }
 
+
 @media screen and (max-width: 1220px) {
-    .header {
-       width: 98vw;
-    }
+  .header {
+    width: 98vw;
+  }
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.headerHeading {
+  font-family: merienda;
+  font-size: 4rem;
+  color: var(--foreground);
+  text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+  margin-top: 1rem;
+}
+
+.nav {
+  margin-bottom: 5px;
+  margin-top: auto;
+  padding: .5rem;
+  font-family: roboto;
+  list-style: none;
+  display: flex;
+}
+
+.navItem {
+  padding: .5rem;
+  margin: 2px;
+  color: var(--background);
+  border: 2px solid var(--header-background);
+}
+
+.navItem:hover {
+  border: 2px solid var(--background);
+}
+
+.sideMenu,
+.hamb,
+.hambLine {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+  /* Hamburger menu */
+  .nav {
+    width: 100vw;
+    align-self: flex-start;
   }
 
-  .header a {
+  .navItem {
+    display: block;
+    padding: 2rem;
+    color: #ffffff;
     text-decoration: none;
   }
 
-  .headerHeading {
-    font-family: merienda;
-    font-size: 4rem;
-    color: var(--foreground);
-    text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+  .nav {
+    list-style-type: none;
+    display: none;
   }
+
+  /* label tag */
+  .hamb {
+    cursor: pointer;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* span tag */
+  .hambLine {
+    background: #ffffff;
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 30px;
+    border-radius: 3px;
+  }
+
+  /*creates line above and under*/
+  .hambLine::before,
+  .hambLine::after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .hambLine::before {
+    top: 8px;
+  }
+
+  .hambLine::after {
+    top: -8px;
+  }
+
+  /*checkbox*/
+  .sideMenu {
+    display: none;
+  }
+
+  /* Toggle menu */
+  .sideMenu:checked~nav {
+    max-height: 100vh;
+  }
+
+  .sideMenu:checked~nav .nav {
+    display: block;
+    text-align: center;
+  }
+
+  /* animation of hamburger-menu */
+  .sideMenu:checked~.hamb .hambLine {
+    background: transparent;
+  }
+
+  .sideMenu:checked~.hamb .hambLine::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .sideMenu:checked~.hamb .hambLine::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
