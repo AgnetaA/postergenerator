@@ -20,8 +20,8 @@
 }
 
 .quoteCard {
-    background-color: var(--background-purple);
-    
+    background-color: var(--background-dark-blue);
+    color: var(--background);
     width: 30%;
     padding: 2rem;
     font-size: 1.2rem;
