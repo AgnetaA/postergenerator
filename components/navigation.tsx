@@ -1,16 +1,28 @@
+"use client";
 import styles from "./header.module.css";
-import Link from "next/link";
+import NavLinks from "./nav-links";
 
 export default function Navigation() {
 
-
+    //makes hamburger menu tabbable
+    const Checking = (e: any) => {
+        if (e.keyCode === 13) {
+            e.preventDefault();
+            document.getElementById("checkboxLabel")?.click();           
+        }
+    }
 
     return (
-        <nav className={styles.nav}>
+        <div className={styles.navContainer}>
+            <input className={styles.sideMenu} type="checkbox" id="side-menu" />
+            <label className={styles.hamb} id="checkboxLabel" htmlFor="side-menu" tabIndex={0} onKeyDown={Checking} >
+                <span className={styles.hambLine}></span>
+            </label>
+            <nav>
+                <NavLinks />
+            </nav>
+        </div>
 
-            <Link className={styles.navItem} href="/">Home</Link>
-            <Link className={styles.navItem} href="/allquotes">All Quotes</Link>
 
-        </nav>
     )
 }
