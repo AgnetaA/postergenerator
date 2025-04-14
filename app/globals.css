@@ -11,6 +11,7 @@
   --midGrey: #797979;
   --background-purple: #e9ade9; 
   --background-blue: #c5daff;
+  --background-dark-blue: rgb(7, 88, 131);
   --pastelGradient: linear-gradient(0deg, rgba(164,229,175,1) 0%, rgba(229,238,128,1) 30%, rgba(226,157,199,1) 65%, rgba(132,202,216,1) 100%);
 
 }

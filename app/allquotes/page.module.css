@@ -1,0 +1,32 @@
+.main {
+    color: var(--foreground);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quotesContainer {
+    text-align: center;
+}
+
+.quoteCard {
+    padding: 1rem;
+    border-bottom: 2px solid #801773;
+}
+
+.linkContainer{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.idLinkPrev, .idLinkNext {
+    color: var(--foreground);
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #801773;
+}
+
+.idLinkPrev:hover, .idLinkNext:hover {
+    text-decoration: underline;
+}
