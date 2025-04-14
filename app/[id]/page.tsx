@@ -1,8 +1,11 @@
 
+
 import { Quotes } from "@/interfaces";
 import styles from "./page.module.css";
 import Image from "next/image";
-
+import { Poster } from "@/interfaces";
+import SaveFav from "@/components/save-fav";
+import { savedFavs } from "@/components/saved-posters";
 
 
 const API_KEY = process.env.IMAGE_API_KEY;
@@ -16,7 +19,6 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
     const quoteresp = await fetch(`https://dummyjson.com/quotes/${id}`);
     const quotedata = await quoteresp.json();
 
-
     //get images
     const imgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${query}&image_type=photo&per_page=50`);
     const imgdata = await imgresp.json();
@@ -24,12 +26,11 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
     let images = imgdata.hits;
 
     //get random image
-
     let num: number = 0;
     if (images.length < 1) {
         //get photos from query "landscape" instead
         const newimgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=landscape&image_type=photo&per_page=50`);
-        const newimgdata = await newimgresp.json(); 
+        const newimgdata = await newimgresp.json();
         images = newimgdata.hits;
 
         num = images.length;
@@ -40,6 +41,19 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
 
     //random image from array with index
     const imgIndex: number = Math.floor(Math.random() * num);
+
+    const imgID: string = images[imgIndex].id.toString();
+
+
+    
+    console.log("quote ID:", id, "- image ID:", imgID);
+    //make object of this compination
+    const thisPoster: Poster = {
+        quoteID: id,
+        imgID: imgID,
+    }
+     
+
 
     return (
         <main id="main">
@@ -57,6 +71,14 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
                 </article>
             </section>
 
+            <section className={styles.alternatives}>
+                <article className={styles.saving}>
+                    <div>{thisPoster.quoteID} - {thisPoster.imgID}</div>
+
+                    
+                    <SaveFav thisPoster={thisPoster}/>
+                </article>
+            </section>
         </main>
 
     )

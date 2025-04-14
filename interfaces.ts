@@ -8,3 +8,8 @@ export interface Photo {
     id: number,
     url: string,
 }
+
+export interface Poster {
+    quoteID: string,
+    imgID: string,
+}
