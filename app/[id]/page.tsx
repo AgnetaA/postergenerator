@@ -44,9 +44,7 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
 
     const imgID: string = images[imgIndex].id.toString();
 
-
-    
-    console.log("quote ID:", id, "- image ID:", imgID);
+ 
     //make object of this compination
     const thisPoster: Poster = {
         quoteID: id,
@@ -56,9 +54,6 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
         imgURL: images[imgIndex].largeImageURL,
     }
      
-
-
-
     return (
         <main id="main">
 

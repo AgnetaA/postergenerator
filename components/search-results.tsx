@@ -19,7 +19,6 @@ export default function SearchResults({ query }: searchResultsProps) {
                 const response = await fetch(`https://dummyjson.com/quotes?limit=0`);
                 const data = await response.json();
 
-
                 const allQuotes: Quotes[] = data.quotes;
 
                 //filters out quotes with search query
