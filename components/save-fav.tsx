@@ -28,8 +28,8 @@ export default function SaveFav({ thisPoster }: propsType) {
     }
 
     return (
-        <div>
-            <button onClick={SavePoster}>Save</button>
+        <div className={styles.buttonDiv}>
+            <button className={styles.saveButton} onClick={SavePoster}>Save this poster!</button>
         </div>
     )
 }

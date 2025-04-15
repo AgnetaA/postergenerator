@@ -19,13 +19,11 @@ export default function SavedPosters() {
     console.log("saved posters, local storage:", savedPosters);
     console.log("posters", posters);
 
-
-
+    
     return (
 
         <div>
             {posters.length > 0 ? posters.map((posters, i) => (
-
 
                 <section className={styles.poster} key={i}>
                     <Image className={styles.photo}
