@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { Poster } from "@/interfaces";
 import SaveFav from "@/components/save-fav";
-import { savedFavs } from "@/components/saved-posters";
+// import { savedFavs } from "@/components/saved-posters";
 
 
 const API_KEY = process.env.IMAGE_API_KEY;
