@@ -16,9 +16,6 @@ export default function SavedPosters() {
         setPosters(savedPosters);
     }, [])
 
-    console.log("saved posters, local storage:", savedPosters);
-    console.log("posters", posters);
-
     
     return (
 

@@ -22,8 +22,6 @@ export default function SaveFav({ thisPoster }: propsType) {
         posters.push(thisPoster);
         alert("This poster has been saved");
 
-        console.log("Poster array:", posters);
-
         localStorage.setItem("savedPosters", JSON.stringify(posters));
     }
 
