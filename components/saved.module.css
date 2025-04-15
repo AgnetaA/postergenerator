@@ -19,8 +19,7 @@
     flex-direction: column;
     font-size: clamp(1rem, 3vw, 2.5rem);
     color: #ffffff;
-    text-shadow: 1px 2px #000000, 0 0 5px #000000;
-    
+    text-shadow: 1px 2px #000000, 0 0 5px #000000;    
 }
 
 .quote {
@@ -48,4 +47,22 @@
 
 .saveButton:hover {
     background-color: var(--header-background);
+}
+
+.deleteButton {
+    display: none;
+    position: absolute;
+    bottom: 3;
+    right: 3;
+    background-color: #801773;
+    color: #ffffff;
+    padding: 0.3rem;
+    border: 1px solid var(--background);
+    border-radius: 5px;
+}
+
+.poster:hover {
+    .deleteButton {
+        display: block;
+    }
 }

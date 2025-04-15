@@ -14,9 +14,24 @@ export default function SavedPosters() {
     useEffect(() => {
         savedPosters = JSON.parse(localStorage.getItem("savedPosters") || "[]");
         setPosters(savedPosters);
-    }, [])
+    }, []);
 
-    
+
+    // function SavePoster() {
+    //     posters.push(thisPoster);
+    //     alert("This poster has been saved");
+
+    //     localStorage.setItem("savedPosters", JSON.stringify(posters));
+    // }
+
+    function DeletePoster() {
+        if (confirm("Are you sure you want to delete this poster?")) {
+            console.log("yes");
+        } else {
+            console.log("no");
+        }
+    };
+
     return (
 
         <div>
@@ -33,9 +48,8 @@ export default function SavedPosters() {
                         <p className={styles.quote}>{posters.quoteText}</p>
                         <p className={styles.author}>~{posters.quoteAuthor}</p>
                     </article>
+                    <button className={styles.deleteButton} onClick={DeletePoster}>Delete</button>
                 </section>
-
-
 
             )) : <p>No saved posters</p>}
         </div>
