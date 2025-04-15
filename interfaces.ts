@@ -1,7 +1,7 @@
 export interface Quotes {
     id: number,
     quote: string,
-    author: string,  
+    author: string,
 }
 
 export interface Photo {
@@ -11,5 +11,9 @@ export interface Photo {
 
 export interface Poster {
     quoteID: string,
+    quoteText: string,
+    quoteAuthor: string,
     imgID: string,
+    imgURL: string,
 }
+

@@ -50,9 +50,13 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
     //make object of this compination
     const thisPoster: Poster = {
         quoteID: id,
+        quoteText: quotedata.quote,
+        quoteAuthor: quotedata.author,
         imgID: imgID,
+        imgURL: images[imgIndex].largeImageURL,
     }
      
+
 
 
     return (
@@ -72,10 +76,7 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
             </section>
 
             <section className={styles.alternatives}>
-                <article className={styles.saving}>
-                    <div>{thisPoster.quoteID} - {thisPoster.imgID}</div>
-
-                    
+                <article className={styles.saving}>              
                     <SaveFav thisPoster={thisPoster}/>
                 </article>
             </section>
