@@ -32,12 +32,10 @@
     margin-left: auto;
 }
 
-.buttonDiv {
-    text-align: center;
-}
-
 .saveButton {
+    font-size: .9rem;
     padding: .5rem;
+    margin: 5px;
     margin-top: 10px;
     border: 1px solid var(--foreground);
     background-color: var(--background-dark-blue);
@@ -54,11 +52,12 @@
     position: absolute;
     bottom: 3;
     right: 3;
-    background-color: #801773;
+    background-color: var(--button-purple);
     color: #ffffff;
     padding: 0.3rem;
     border: 1px solid var(--background);
     border-radius: 5px;
+    
 }
 
 .poster:hover {

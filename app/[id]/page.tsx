@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { Poster } from "@/interfaces";
 import SaveFav from "@/components/save-fav";
+import Link from "next/link";
 
 
 const API_KEY = process.env.IMAGE_API_KEY;
@@ -59,6 +60,7 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
         imgID: imgID,
         imgURL: images[imgIndex].largeImageURL,
     }
+
      
     return (
         <main id="main">
@@ -77,7 +79,8 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
             </section>
 
             <section className={styles.alternatives}>
-                <article className={styles.saving}>              
+                <article className={styles.saving}>  
+                    <Link href={`/${thisPoster.quoteID}?query=${query}`} className={styles.changeButton}>Get another photo</Link>            
                     <SaveFav thisPoster={thisPoster}/>
                 </article>
             </section>

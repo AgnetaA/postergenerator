@@ -40,4 +40,25 @@
     span{
         font-size: 3rem;
     }
+} 
+
+.saving {
+    display: flex;
+    justify-content: center;
+}
+
+.changeButton {
+    text-decoration: none;
+    font-size: .9rem;
+    padding: .5rem;
+    margin: 5px;
+    margin-top: 10px;
+    border: 1px solid var(--foreground);
+    background-color: var(--button-purple);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.changeButton:hover {
+    background-color: #93133b;
 }
