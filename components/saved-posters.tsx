@@ -49,7 +49,7 @@ export default function SavedPosters() {
                     <button className={styles.deleteButton} onClick={(e) => DeletePoster(e, i, savedPosters)}>Delete</button>
                 </section>
 
-            )) : <p>No saved posters</p>}
+            )) : <p>No saved posters could be found</p>}
         </div>
     )
 }
