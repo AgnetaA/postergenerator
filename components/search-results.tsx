@@ -13,7 +13,7 @@ export default function SearchResults({ query }: searchResultsProps) {
     const [quotes, setQuotes] = useState<Quotes[]>([]);
 
     useEffect(() => {
-        if (!query) return;
+        if (!query) return; 
         const fetchQuotes = async () => {
             try {
                 const response = await fetch(`https://dummyjson.com/quotes?limit=0`);
