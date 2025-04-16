@@ -14,9 +14,22 @@ export default function SavedPosters() {
     useEffect(() => {
         savedPosters = JSON.parse(localStorage.getItem("savedPosters") || "[]");
         setPosters(savedPosters);
-    }, [])
-
+    }, []);
     
+
+    const DeletePoster = (e:React.FormEvent, i:number, savedPosters:Poster[]) => {
+        e.preventDefault();
+        if (confirm("Are you sure you want to delete this poster?")) {
+
+            posters.splice(i, 1);  
+           
+            localStorage.setItem("savedPosters", JSON.stringify(posters));
+                  
+            savedPosters = JSON.parse(localStorage.getItem("savedPosters") || "[]");
+            setPosters(savedPosters);
+        } 
+    }
+
     return (
 
         <div>
@@ -33,9 +46,8 @@ export default function SavedPosters() {
                         <p className={styles.quote}>{posters.quoteText}</p>
                         <p className={styles.author}>~{posters.quoteAuthor}</p>
                     </article>
+                    <button className={styles.deleteButton} onClick={(e) => DeletePoster(e, i, savedPosters)}>Delete</button>
                 </section>
-
-
 
             )) : <p>No saved posters</p>}
         </div>
