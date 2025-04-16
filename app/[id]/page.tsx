@@ -1,5 +1,3 @@
-
-
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Poster } from "@/interfaces";
@@ -15,19 +13,29 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
 
     //get the quote
     const quoteresp = await fetch(`https://dummyjson.com/quotes/${id}`);
+    if (!quoteresp.ok) {
+        return(<main className={styles.error}><p>Error {quoteresp.status}: {quoteresp.statusText}</p><span>🤪</span></main>)    
+    } 
     const quotedata = await quoteresp.json();
 
     //get images
-    const imgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${query}&image_type=photo&per_page=50`);
+    const imgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${query}&image_type=photo&per_page=100`);
+    if (!imgresp.ok) {
+        return(<main className={styles.error}><p>Error {imgresp.status}: {imgresp.statusText}</p><span>🤪</span></main>)    
+    } 
     const imgdata = await imgresp.json();
 
     let images = imgdata.hits;
+
 
     //get random image
     let num: number = 0;
     if (images.length < 1) {
         //get photos from query "landscape" instead
-        const newimgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=landscape&image_type=photo&per_page=50`);
+        const newimgresp = await fetch(`https://pixabay.com/api/?key=${API_KEY}&q=landscape&image_type=photo&per_page=100`);
+        if (!newimgresp.ok) {
+            return(<main className={styles.error}><p>Error {newimgresp.status}: {newimgresp.statusText}</p><span>🤪</span></main>)    
+        } 
         const newimgdata = await newimgresp.json();
         images = newimgdata.hits;
 
