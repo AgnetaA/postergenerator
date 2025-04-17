@@ -1,0 +1,61 @@
+.main {
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 130px;
+    height: 100px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.mountainimg {
+    position: absolute;
+}
+
+.loader div {
+    width: 70%;
+    margin-top: auto;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 0.5rem;
+    align-self: flex-end;
+    padding: 3px;
+    position: absolute
+}
+
+.p2 {
+    float: right;
+}
+
+.loaderspan {
+    width: 130px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: flip 3s linear infinite;
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(300px) rotateX(360deg) rotateY(0deg);
+    }
+    40% {
+        transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+    }
+    60% {
+        transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(300px) rotateX(0deg) rotateY(360deg);
+    }
+}
