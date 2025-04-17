@@ -4,6 +4,10 @@
 
 .main {
     color: var(--foreground);
+    background-image: url("../../public/flowers-red.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .searchTerm {
