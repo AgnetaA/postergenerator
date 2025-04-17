@@ -4,6 +4,10 @@
 
 .main {
     color: var(--foreground);
+    background-image: url("../../public/flowers-red.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .searchTerm {
@@ -21,7 +25,7 @@
 
 .quoteCard {
     background-color: var(--background-dark-blue);
-    color: var(--background);
+    color: #ffffff;
     width: 30%;
     padding: 2rem;
     font-size: 1.2rem;

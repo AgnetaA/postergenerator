@@ -41,7 +41,7 @@
 .navItem {
   padding: .5rem;
   margin: 2px;
-  color: var(--background);
+  color: #ffffff;
   border: 2px solid var(--header-background);
 }
 
