@@ -4,6 +4,8 @@ import { Dancing_Script } from "next/font/google";
 import { Merienda } from "next/font/google"; 
 import "./globals.css";
 import Header from "@/components/header";
+import { Suspense } from "react";
+import Loader from "@/components/loader";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -35,7 +37,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.variable} ${dancingScript.variable} ${merienda.variable}`}>
         <Header />
+        <Suspense fallback={<Loader />}>
         {children}
+        </Suspense>
       </body>
     </html>
   );
