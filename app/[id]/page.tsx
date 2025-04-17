@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Poster } from "@/interfaces";
 import SaveFav from "@/components/save-fav";
 import Link from "next/link";
+import MoveText from "@/components/move-text";
 
 
 const API_KEY = process.env.IMAGE_API_KEY;
@@ -72,7 +73,7 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
                     width={400}
                     height={300}
                 />
-                <article className={styles.quoteContainer}>
+                <article className={styles.quoteContainer} id="quoteContainer">
                     <p className={styles.quote}>{quotedata.quote}</p>
                     <p className={styles.author}>~{quotedata.author}</p>
                 </article>
@@ -80,6 +81,7 @@ export default async function Posterizer({ params, searchParams }: { params: Pro
 
             <section className={styles.alternatives}>
                 <article className={styles.saving}>  
+                    <MoveText />
                     <Link href={`/${thisPoster.quoteID}?query=${query}`} className={styles.changeButton}>Get another photo</Link>            
                     <SaveFav thisPoster={thisPoster}/>
                 </article>
