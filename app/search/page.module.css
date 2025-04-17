@@ -25,7 +25,7 @@
 
 .quoteCard {
     background-color: var(--background-dark-blue);
-    color: var(--background);
+    color: #ffffff;
     width: 30%;
     padding: 2rem;
     font-size: 1.2rem;
