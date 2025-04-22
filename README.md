@@ -24,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 1. Get your own API-key from [`Pixabay`](https://pixabay.com/) by signing up there.
 More info about the API at their [`API docs page`](https://pixabay.com/api/docs/).
-2. Then place it in an .env.local-file in the root folder. 
+2. Then place it in an .env.local-file in the root folder. ![.env.local-file](public/envloc.png)
 3. Name it IMAGE_API_KEY, like this: IMAGE_API_KEY=xxxxxxxxxx
   
 
