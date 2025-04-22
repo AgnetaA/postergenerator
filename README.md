@@ -20,10 +20,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
     
-## In order for this app to work you will need to:
+## In order for this app to work you will need to:                                              
 
-1. Get your own API-key from [`Pixabay`](https://pixabay.com/) by signing up there. More info about the API at their [`API docs page`](https://pixabay.com/api/docs/).
-2. Then place it in an env.local-file in the root folder. 
+1. Get your own API-key from [`Pixabay`](https://pixabay.com/) by signing up there.
+More info about the API at their [`API docs page`](https://pixabay.com/api/docs/).
+2. Then place it in an .env.local-file in the root folder. ![.env.local-file](public/envloc.png)
 3. Name it IMAGE_API_KEY, like this: IMAGE_API_KEY=xxxxxxxxxx
   
 
@@ -32,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 1. Just enter a search term on the home page.
 2. After pressing enter you will be taken to any quotes containing that phrase or authors name.
 3. If quotes are found, choose one and click on "Posterize this". You will be taken to the poster-page where a random photo on the same theme is used as background to the quote. 
-4. Dont like the combo? get a new image with the "Get another photo"-button or by refreshing the page.
+4. Don't like the combo? get a new image with the "Get another photo"-button or by refreshing the page.
 5. Like it a lot? Save it as a favourite. The saved posters are available under "Saved Posters" in the menu. The posters are only saved with localStorage.
 
 ![make poster with quote](public/aquote.png)
