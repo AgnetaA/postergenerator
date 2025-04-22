@@ -1,7 +1,7 @@
 
 ![Posterizer](public/Posterizer.png)
 
-# A Poster Generator!
+# A Poster Generator
 
 With this app you can make a poster on screen with a chosen quote and a random photo, all based on the same search term.
 
@@ -14,9 +14,11 @@ With this app you can make a poster on screen with a chosen quote and a random p
 4. Dont like the combo? get a new image with the "Get another photo"-button or by refreshing the page.
 5. Like it a lot? Save it as a favourite. The saved posters are available under "Saved Posters" in the menu.
 
-APIs used:
-Quotes: [`dummyjson.com/docs/quotes`](https://dummyjson.com/docs/quotes)
-Photos: [`pixabay.com/api/docs/`](https://pixabay.com/api/docs/)
+![make poster with quote](public/aquote.png)
+
+APIs used:  
+Quotes: [`dummyjson.com/docs/quotes`](https://dummyjson.com/docs/quotes)  
+Photos: [`pixabay.com/api/docs/`](https://pixabay.com/api/docs/)  
 
 
 ## In order for it to work you will need to:
