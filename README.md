@@ -1,9 +1,14 @@
 # Poster Generator
 
+With this app you can make a poster on screen with a chosen quote and a random photo, all with the same search term. 
 
+In order for it to work you will need to:
+1. Get your own API-key from [`Pixabay`](https://pixabay.com/) by signing up there. 
+2. Then place it in an env.local-file in the root folder. 
+3. Name it IMAGE_API_KEY, like this: IMAGE_API_KEY=xxxxxxxxxx...
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
